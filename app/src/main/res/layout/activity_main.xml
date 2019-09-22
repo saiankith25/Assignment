@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:id="@+id/create_text"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Text Below:"
+            android:id="@+id/tv1"
+            ></TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/created_text"
+            android:layout_below="@+id/tv1">
+
+        </EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Text"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/submit"
+            android:layout_below="@+id/created_text"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_properties"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/create_text">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/color"
+            android:background="#000"
+            />
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:hint="Eg: #ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/color"
+            android:id="@+id/color_code"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/color"
+            android:text="Text Color"
+            android:layout_below="@+id/color_code"
+            android:id="@+id/select_color"
+            android:layout_marginLeft="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            >
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_size"
+                android:hint="Font Size"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text Size"
+                android:id="@+id/text_sze"
+                android:layout_below="@+id/text_size"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/text_properties">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:id="@+id/tv2"
+            android:text="Below is the submitted text:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:id="@+id/submitted_text"
+            android:layout_below="@+id/tv2"
+            android:text=""/>
+    </RelativeLayout>
+
+</RelativeLayout>
